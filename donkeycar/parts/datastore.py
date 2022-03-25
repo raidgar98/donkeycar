@@ -446,7 +446,7 @@ class TubWriter(Tub):
 
         self.record_time = int(time.time() - self.start_time)
         record = dict(zip(self.inputs, args))
-        record['distance'] = float( distance_sensor.Measurement(trig_pin=12, echo_pin=16).raw_distance() )
+        record['distance'] = float( distance_sensor.Measurement(trig_pin=23, echo_pin=24).raw_distance() )
         self.put_record(record)
         return self.current_ix
 
