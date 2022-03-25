@@ -237,6 +237,7 @@ class Tub(object):
                 json_data[key]=name
 
             else:
+                print(f'Found undefined type for key={key}, value={val}')
                 msg = 'Tub does not know what to do with this type {}'.format(typ)
                 raise TypeError(msg)
 
